@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 14.15.1
+script:
+  - "yarn build"
+  - "yarn test:nowatch"
+
+deploy:
+  provide: heroku
+  api_key:
+    secure: $HEROKU_TOKEN
+  app: book-store-web-ck
