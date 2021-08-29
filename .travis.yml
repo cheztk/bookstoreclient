@@ -6,7 +6,7 @@ script:
   - "yarn test:nowatch"
 
 deploy:
-  provide: heroku
+  provider: heroku
   api_key:
     secure: $HEROKU_TOKEN
-  app: book-store-web-ck
+  app: "book-store-web-ck"
