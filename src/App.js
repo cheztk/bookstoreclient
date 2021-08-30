@@ -1,7 +1,18 @@
+import {useEffect} from 'react';
+import axios from "axios";
+import baseUrl from './config';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect( () => {
+    async function getBooks(){
+      const books = await axios(`{$baseUrl}/api/v1/books`);
+      return books;
+    }
+    console.log(getBooks());
+
+  },[]);
   return (
     <div className="App">
       <header className="App-header">
