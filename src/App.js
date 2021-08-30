@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   useEffect( () => {
     async function getBooks(){
-      const books = await axios(`{$baseUrl}/api/v1/books`);
+      const books = await axios(`${baseUrl}/api/v1/books`);
       return books;
     }
     console.log(getBooks());
